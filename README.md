@@ -1,5 +1,7 @@
 # Building Real-Time Web Apps with Spring Boot and WebSockets
 
+[![Java CI](https://github.com/laissonsilveira/realtime-chat/actions/workflows/main.yml/badge.svg?branch=main)](https://github.com/laissonsilveira/realtime-chat/actions/workflows/main.yml)
+
 This project contains:
 
 * Real-time app
