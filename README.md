@@ -14,4 +14,4 @@ This project contains:
 
 Screenshot:
 
-![](RealTime-Chat.png "RealTime-Chat")
+![](realtime-chat.png "RealTime-Chat")
