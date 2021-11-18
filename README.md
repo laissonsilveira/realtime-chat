@@ -14,4 +14,4 @@ This project contains:
 
 Screenshot:
 
-![](/Users/laissonsilveira/AmbienteDev/workspaces_intelliJ/realtime-chat/RealTime-Chat.png "RealTime-Chat")
+![](RealTime-Chat.png "RealTime-Chat")
