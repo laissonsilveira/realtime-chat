@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <title>Chat App</title>
     <link href="/webjars/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -9,57 +9,49 @@
     <script src="/webjars/stomp-websocket/stomp.min.js"></script>
     <script src="/app.js"></script>
 </head>
-<body>
-<noscript><h2 style="color: #ff0000">Seems your browser doesn't support Javascript! WebSocket relies on Javascript being
-    enabled. Please enable
-    Javascript and reload this page!</h2></noscript>
+    <body>
+        <noscript><h2 style="color: #ff0000">Seems your browser doesn't support Javascript! WebSocket relies on Javascript being
+            enabled. Please enable Javascript and reload this page!</h2></noscript>
 
-<div id="main-content" class="container">
-    <div class="row">
-        <div class="col">
-            <form>
-                <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="shortName" placeholder="Your username here...">
-                    <label for="shortName">Join the Conversation</label>
+        <div id="main-content" class="container">
+            <div class="row">
+                <div class="col">
+                    <h3>Members</h3>
+                    <form>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="shortName" placeholder="Your username here...">
+                            <label for="shortName">Join the Conversation</label>
+                        </div>
+                        <button id="connect" class="btn btn-secondary" type="submit">Join</button>
+                        <button id="disconnect" class="btn btn-secondary" type="submit" disabled="disabled">Leave</button>
+                    </form>
                 </div>
-                <button id="connect" class="btn btn-secondary" type="submit">Join</button>
-                <button id="disconnect" class="btn btn-secondary" type="submit" disabled="disabled">Leave</button>
-            </form>
-        </div>
-        <div class="col">
-            <form>
-                <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="message" placeholder="Your message here...">
-                    <label for="message">Send a Message</label>
+                <div class="col">
+                    <h3>Messages</h3>
+                    <form>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="message" placeholder="Your message here...">
+                            <label for="message">Send a Message</label>
+                        </div>
+                        <button id="send" class="btn btn-secondary" type="submit">Send</button>
+                    </form>
                 </div>
-                <button id="send" class="btn btn-secondary" type="submit">Send</button>
-            </form>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div>&nbsp;</div>
+                    <table id="memberslog" class="table">
+                        <tbody id="members"></tbody>
+                    </table>
+                </div>
+                <div class="col">
+                    <div id="typingUpdates"></div>
+                    <div id="errorMessages" style="color: red;"></div>
+                    <table id="conversation" class="table">
+                        <tbody id="chatMessages"></tbody>
+                    </table>
+                </div>
+            </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="col">
-            <h3>Members</h3>
-            <table id="memberslog" class="table">
-                <thead>
-                </thead>
-                <tbody id="members">
-                </tbody>
-            </table>
-        </div>
-        <div class="col">
-            <h3>Messages</h3>
-            <table id="conversation" class="table">
-                <thead>
-                <tr id="typingUpdates">
-                </tr>
-                <tr id="errorMessages" style="color: red;">
-                </tr>
-                </thead>
-                <tbody id="chatMessages">
-                </tbody>
-            </table>
-        </div>
-    </div>
-</div>
-</body>
+    </body>
 </html>
